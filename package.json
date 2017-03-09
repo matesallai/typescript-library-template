@@ -1,0 +1,39 @@
+{
+  "name": "typescript-library-template",
+  "version": "1.0.0",
+  "description": "TypeScript library template",
+  "main": "./dist/index.min.js",
+  "types": "./dist/Index.d.ts",
+  "typings": "./dist/Index.d.ts",
+  "typescript": {
+    "definition": "./dist/Index.d.ts"
+  },
+  "scripts": {
+    "prepublish": "npm test && webpack  --config webpack.dist.config.js --progress --colors --debug",
+    "test": "jest --no-cache"
+  },
+  "author": "Máté Sallai",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "19.0.2",
+    "ts-jest": "19.0.0",
+    "ts-loader": "2.0.0",
+    "tslint": "4.4.2",
+    "tslint-loader": "3.4.2",
+    "typescript": "2.1.6",
+    "webpack": "2.2.1"
+  },
+  "dependencies": {
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/test/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "collectCoverage": false
+  }
+}
